@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Reservations</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="div1200 paddingtb2 d-flex d-flex-ai-c d-flex-jc-sp">
+                <a href="welcome.html"><img src="images/logo.png" class="logo" alt=""></a>
+                <ul class="menu d-flex d-flex-ai-c">
+                    <li class="marginlr2 padding1 main-bg-color"><a href="aboutUs.html" class="white">About Us</a></li>
+                    <p class="phone-number">555-555-5555</p>
+                </ul>
+            </div>
+        </header>
+        <div class="order div1200 paddingtb2">
+            <h1>Reservation information</h1>
+            <form class="padding1" onsubmit="event.preventDefault(); validateForm();">
+                <div class="item d-flex d-flex-ai-c padding1">
+                    <label for="firstName"><b>*</b> First Name</label>
+                    <input type="text" placeholder="Enter first name" id="firstName">
+                </div>
+                <div class="item d-flex d-flex-ai-c padding1">
+                    <label for="lastName"><b>*</b> Last Name</label>
+                    <input type="text" placeholder="Enter last name" id="lastName">
+                </div>
+                <div class="item padding1">
+                    <div class="d-flex d-flex-ai-c">
+                        <label for="smoke"><b>*</b> Smoke</label>
+                        <select name="smoke" id="smoke">
+                            <option value="false">false</option>
+                            <option value="true">true</option>
+                        </select>
+                    </div>
+                    <p>Guests may smoke in all of the top floor rooms but none of the others. </p>
+                </div>
+                <div class="item d-flex d-flex-ai-c padding1">
+                    <label for="numberPeople"><b>*</b> Number people</label>
+                    <input type="number" placeholder="Enter number people" id="numberPeople">
+                </div>
+                <div class="item padding1">
+                    <div class="d-flex d-flex-ai-c">
+                        <label for="roomType"><b>*</b> Room</label>
+                        <select name="roomType" id="roomType"></select>
+                    </div>
+                </div>
+                <div class="item d-flex d-flex-ai-c padding1">
+                    <label for="checkInDate"><b>*</b> Check in date</label>
+                    <input type="date" placeholder="chose check in date" id="checkInDate">
+                </div>
+                <div class="item d-flex d-flex-ai-c padding1">
+                    <label for="checkOutDate"><b>*</b> Check out date</label>
+                    <input type="date" placeholder="chose check out date" id="checkOutDate">
+                </div>
+                <div class="item d-flex d-flex-ai-c padding1">
+                    <label><b>*</b> Address</label>
+                    <select name="city" id="city" class="select-sm">
+                        <option value="America">America</option>
+                    </select>
+                    <select name="state" id="state" class="select-sm marginlr1">
+                        <option value="California">California</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Virginia">Virginia</option>
+                        <option value="New York">New York</option>
+                        <option value="other state">other state</option>
+                    </select>
+                </div>
+                <div class="item d-flex d-flex-ai-c padding1">
+                    <label for="zipCode"><b>*</b> Zip Code</label>
+                    <input type="number" placeholder="Enter zip code" id="zipCode">
+                </div>
+                <div class="item d-flex d-flex-ai-c padding1">
+                    <label for="cardNumber">card number</label>
+                    <input type="text" placeholder="Enter card number" id="cardNumber">
+                </div>
+
+                <div class="item padding1">
+                    <div class=" d-flex d-flex-ai-c">
+                        <label for="breakfast">Breakfast</label>
+                        <select name="breakfast" id="breakfast">
+                            <option value="false">false</option>
+                            <option value="true">true</option>
+                        </select>
+                    </div>
+                    <p>The cost of breakfast is $20 per person, except if a loyalty number is provided in which case it
+                        is free.</p>
+                </div>
+                <div class="item item-btn d-flex d-flex-ai-c d-flex-jc-c padding1">
+                    <input type="submit" value="send">
+                    <input type="reset" value="reset" id="reset" class="marginlr1">
+                </div>
+            </form>
+            <div class="introduce-show d-flex d-flex-al-c d-flex-jc-sp">
+                <img src="images/1.jpeg" alt="">
+                <img src="images/2.png" alt="">
+                <img src="images/3.jpeg" alt="">
+            </div>
+        </div>
+        <footer class="paddingtb1 d-flex d-flex-ai-c d-flex-fd-c">
+            <p>@copyright Tianbo hotel</p>
+            <a href="https://ditu.google.com">address: xxxxx</a>
+        </footer>
+    </div>
+
+    <script src="js/reservationsData.js"></script>
+    <script src="js/reservations.js"></script>
+    <!-- <script src="js/checkAvailability.js"></script> -->
+</body>
+
+</html>
