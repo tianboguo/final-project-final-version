@@ -44,15 +44,15 @@ function roomTypeQuery() {
 }
 
 function validateForm() {
-    let dataFilter = ROOM_RESERVATIONS.filter(v => v.reservationId === roomType.value),
+    let dataFilter = ROOM_RESERVATIONS.filter(v => v.reservationId == roomType.value),
         spend = 0;
     if (dataFilter.length > 0) {
         console.log(smoke.value, dataFilter[0].smoke.toString())
-        if (smoke.value !== dataFilter[0].smoke.toString()) {
+        if (smoke.value != dataFilter[0].smoke.toString()) {
             alert("Guests may smoke in all of the top floor rooms but none of the others.")
             return false;
         }
-        if (numberPeople.value === "") {
+        if (numberPeople.value == "") {
             alert("umber people date cannot be empty")
             return false;
         }
@@ -60,7 +60,7 @@ function validateForm() {
             alert("There is a maximum of 2 people in the King and Double rooms and a maximum of 4 people in a suite.")
             return false;
         }
-        if (checkInDate.value === "") {
+        if (checkInDate.value == "") {
             alert("check in date cannot be empty")
             return false;
         }
@@ -68,7 +68,7 @@ function validateForm() {
         //     alert("The Check In dates must be after today.");
         //     return false;
         // }
-        if (checkOutDate.value === "") {
+        if (checkOutDate.value == "") {
             alert("check out date cannot be empty")
             return false;
         }
@@ -83,7 +83,7 @@ function validateForm() {
         }
         spend = dataFilter[0].price;
     }
-    if (!cardNumber.value && breakfast.value === 'true') {
+    if (!cardNumber.value && breakfast.value == 'true') {
         spend += parseInt(numberPeople.value) * 20;
     }
     obj = {
